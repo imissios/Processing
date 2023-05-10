@@ -66,12 +66,12 @@ ArrayList<Obstacle>[][] grid = new ArrayList[numRows][numCols];
 void setup() {
   size(1280, 720);
   smooth();
-  background(15, 0, 8); // Set default values for red and blue
+  background(15, 0, 8); 
     for (int x = 0; x < width; x++) {
       for (int y = 0; y < height; y++) {
         float noiseValue = noise(x * noiseScale, y * noiseScale);
-        int greenValue = (int) map(noiseValue, 0, 1, 15, 72);
-        stroke(0, greenValue, 0);
+        int green = (int) map(noiseValue, 0, 1, 15, 72);
+        stroke(0, green, 0);
         point(x, y);
       }
     }
